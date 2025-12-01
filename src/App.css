@@ -1,0 +1,55 @@
+/*ここはこのページに対してのみ*/
+input[type="checkbox"] {
+  width: 19px;    /* 幅 */
+  height: 19px;   /* 高さ */
+  cursor: pointer; /* カーソルをポインターに */
+}
+
+/* 📝 修正: 入力欄の幅と高さを大きくする */
+input[type="Todotext"] {
+  width: 10cm;    /* 8cmから10cmに拡張 */
+  height: 1cm;   /* 0.7cmから1cmに拡張 */
+  font-size: 1.1em; /* 📝 追加: 通常時のテキストサイズも少し大きくする */
+  cursor: pointer; /* カーソルをポインターに */
+}
+
+/* スマホサイズ（最大幅600px）向けの調整 */
+@media (max-width: 600px) {
+  div {
+    padding: 10px !important;  /* inline styleより強い優先度を与えたい時は !important を付ける */
+  }
+
+  h1 {
+    font-size: 1.8em; /* フォントを小さく */
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 0 !important;
+  }
+
+  /* 📝 修正: リストのテキストサイズを大きくする (0.9em から 1.1em へ) */
+  li {
+    margin: 8px 0 !important;
+    font-size: 1.1em;
+  }
+
+  /* 📝 修正: input[type="text"] は input[type="Todotext"] と button に適用されます */
+  input[type="text"], button {
+    width: 100%; /* 入力欄とボタンを横幅いっぱいに */
+    margin-top: 8px;
+    box-sizing: border-box;
+  }
+
+  /* 📝 追加: input[type="Todotext"] の高さを調整 */
+  input[type="Todotext"] {
+      height: 45px; /* 高さを大きめに設定 */
+      font-size: 1.1em; /* テキストサイズを設定 */
+  }
+
+  /* チェックボックスを少し大きめに */
+  input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+  }
+}
